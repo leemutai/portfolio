@@ -45,11 +45,15 @@
             </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="opentab('Skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('Experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="Skills">
               <ul>
                 <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
                 <li><span>Web Developer</span><br />Web App Development</li>
@@ -58,21 +62,40 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="Experience">
               <ul>
-                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
-                <li><span>Web Developer</span><br />Web App Development</li>
                 <li>
-                  <span>App Development</span><br />Building Android/ISO Apps
+                  <span>2024 - Current</span><br />Backend Associate at Upwork
+                </li>
+                <li>
+                  <span>2022 - 2024</span><br />Mobile Dev at Great Works Africa
+                </li>
+                <li>
+                  <span>2022 - 2024</span><br />Mobile Dev at Great Works Africa
+                </li>
+                <li>
+                  <span>2020 - 2022</span><br />Software Developer at Tech
+                  Solutions
                 </li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="Education">
               <ul>
-                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
-                <li><span>Web Developer</span><br />Web App Development</li>
                 <li>
-                  <span>App Development</span><br />Building Android/ISO Apps
+                  <span>April 2024 - July 2014</span><br />Software Development
+                  and Cyber Security at Kenyatta Univeristy
+                </li>
+                <li>
+                  <span>2020 - 2024</span><br />Bsc Computer Science at The
+                  C0-opertaive Universisty Of Kenya
+                </li>
+                <li>
+                  <span>2023</span><br />Certificate in Web Development at
+                  Emobilis Kenya
+                </li>
+                <li>
+                  <span>2020</span><br />Certificate in Software Development at
+                  Modcom Institute Kenya
                 </li>
               </ul>
             </div>
@@ -80,5 +103,19 @@
         </div>
       </div>
     </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
