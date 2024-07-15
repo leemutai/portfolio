@@ -233,7 +233,7 @@
             <a href="images/my-cv.pdf" download class="btn btn2">Download Cv</a>
           </div>
           <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -277,6 +277,17 @@
       function closemenu() {
         sidemenu.style.right = "-200px";
       }
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyZbGIsjZ6J5YRAhyOR7buOjN11j2Mn5WLaXRq-IQ5pCbmzDSX_5vUorypb_xbz5sn2Nw/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
