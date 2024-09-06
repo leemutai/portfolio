@@ -17,7 +17,7 @@
     <div id="header">
       <div class="container">
         <nav>
-          <img src="images/logo1.png" class="logo" />
+          <!-- <img src="images/logo1.png" class="logo" /> -->
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -29,7 +29,7 @@
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>UI/UX Designer</p>
+          <p>Software Developer</p>
           <h1>
             Hi, I'm <span>Lee</span><br />
             From Kenya
@@ -47,10 +47,13 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              Lorem ipsum, dolor sit amet consec adipisicing elit. Labore
-              placeat explicabo optio repellat error cumque distinctio minus
-              itaque quae eaque et in, nemo impedit at dignissimos aperiam qui
-              enim ullam?
+              I am a passionate web and mobile developer with experience in
+              building innovative and scalable solutions for real estate and
+              agriculture industries. Skilled in various programming languages
+              and frameworks, I focus on delivering user-friendly applications
+              with a strong emphasis on performance and design. My expertise
+              spans both front-end and back-end development, using Django,
+              React, Kotlin, HTML, and CSS.
             </p>
 
             <div class="tab-titles">
@@ -122,10 +125,12 @@
             <i class="fa-solid fa-code"></i>
             <h2>Web Design</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit in,
-              delectus aspernatur quisquam commodi dolorem quidem quas quam amet
-              reiciendis esse tenetur officia a optio suscipit! Iusto
-              consectetur totam laudantium.
+              I offer end-to-end web development services, specializing in
+              building dynamic and responsive websites tailored to your business
+              needs. With expertise in both front-end and back-end technologies,
+              I provide solutions that are scalable, secure, and optimized for
+              performance. From design to deployment, I ensure seamless
+              functionality and an excellent user experience.
             </p>
             <a href="#">Learn more</a>
           </div>
@@ -134,10 +139,13 @@
             <i class="fa-solid fa-crop-simple"></i>
             <h2>UI/UX Design</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit in,
-              delectus aspernatur quisquam commodi dolorem quidem quas quam amet
-              reiciendis esse tenetur officia a optio suscipit! Iusto
-              consectetur totam laudantium.
+              I create intuitive and engaging user interfaces that prioritize
+              seamless user experiences. My approach focuses on combining
+              aesthetics with functionality to ensure that each design is both
+              visually appealing and user-friendly. I work closely with clients
+              to understand their needs, delivering wireframes, prototypes, and
+              final designs that align with their brand identity and business
+              goals.
             </p>
             <a href="#">Learn more</a>
           </div>
@@ -145,10 +153,12 @@
             <i class="fa-brands fa-app-store"></i>
             <h2>App Design</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit in,
-              delectus aspernatur quisquam commodi dolorem quidem quas quam amet
-              reiciendis esse tenetur officia a optio suscipit! Iusto
-              consectetur totam laudantium.
+              I specialize in crafting visually appealing and highly functional
+              mobile app designs that enhance user engagement. My app design
+              process focuses on creating intuitive user interfaces that ensure
+              seamless navigation and a smooth user experience. I prioritize
+              responsiveness and usability to deliver designs that work
+              flawlessly across all devices.
             </p>
             <a href="#">Learn more</a>
           </div>
@@ -279,15 +289,16 @@
       }
     </script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyZbGIsjZ6J5YRAhyOR7buOjN11j2Mn5WLaXRq-IQ5pCbmzDSX_5vUorypb_xbz5sn2Nw/exec'
-      const form = document.forms['submit-to-google-sheet']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyZbGIsjZ6J5YRAhyOR7buOjN11j2Mn5WLaXRq-IQ5pCbmzDSX_5vUorypb_xbz5sn2Nw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
